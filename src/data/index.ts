@@ -107,3 +107,20 @@ export const formInputsList: IFormInput[] = [
         placeholder: "Enter product price",
     }
 ]
+
+export const colors:string[] = [
+    "#FF5733",
+    "#33FF57",
+    "#3357FF",
+    "#FF33A1",
+    "#FF8333",
+    "#33FFA1",
+    "#A133FF",
+    "#FF33FF",
+    "#33FF33",
+    "#FF3333",
+    "#FFAA33",
+    "#33AAFF",
+    "#AA33FF",
+    "#FFAAFF",
+]

@@ -2,12 +2,13 @@ import { FormEvent, useState } from 'react'
 import './App.css'
 import ProductCard from './components/ProductCard'
 import Modal from './components/ui/Modal'
-import { formInputsList, productList } from './data'
+import { colors, formInputsList, productList } from './data'
 import Button from './components/ui/Button'
 import Input from './components/ui/Input'
 import { IProduct } from './interfaces'
 import { vaildateProduct } from './validation'
 import ErrorMessage from './components/ErrorMessage'
+import CircleColor from './components/CircleColor'
 
 function App() {
   const defaultProduct = {
@@ -23,6 +24,8 @@ function App() {
   }
   const [isOpen, setIsOpen] = useState(false)
   const [product, setProduct] = useState<IProduct>(defaultProduct)
+  const [tempColor, setTempColor] = useState<string[]>([])
+  console.log(tempColor);
   const [errors, setErrors] = useState({
     title: '',
     description: '',
@@ -84,6 +87,14 @@ function App() {
     </div>
   ))
 
+  const renderProductColors = colors.map(color => <CircleColor key={color} color={color} onClick={()=>{
+    if (tempColor.includes(color)){
+      setTempColor((prev)=>prev.filter((item)=>item !== color))
+      return;
+    }
+    setTempColor((prev)=>[...prev,color])
+  }}/>)
+
   return (
     <>
       <main className='container'>
@@ -94,6 +105,12 @@ function App() {
         <Modal isOpen={isOpen} close={close} title='ADD A NEW PRODUCT'>
           <form className='space-y-3' onSubmit={handelSubmit}>
             {renderFormInputList}
+            <div className='flex flex-wrap items-center space-x-2'>
+              {tempColor.map((color)=>(<span key={color} className='p-1 mb-1 text-xs rounded-md text-white' style={{backgroundColor:color}}>{color}</span>))}
+            </div>
+            <div className='flex items-center space-x-2'>
+              {renderProductColors}
+            </div>
             <div className="flex items-center justify-between my-4 space-x-2">
               <Button className="bg-indigo-700">Submit</Button>
               <Button onClick={() => {
