@@ -1,4 +1,4 @@
-import { IProduct } from "../interfaces/IProduct"
+import { IFormInput, IProduct } from "../interfaces"
 
 export const productList: IProduct[] = [
     {
@@ -60,5 +60,50 @@ export const productList: IProduct[] = [
             "name": "Wearables",
             "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420"
         }
+    }
+]
+
+export const formInputsList: IFormInput[] = [
+    {
+        id: "title",
+        name: "title",
+        label: "Product Title",
+        type: "text",
+        placeholder: "Enter product title",
+    },
+    {
+        id: "description",
+        name: "description",
+        label: "Product Description",
+        type: "text",
+        placeholder: "Enter product description",
+    },
+    {
+        id: "imageUrl",
+        name: "imageUrl",
+        label: "Product Image URL",
+        type: "text",
+        placeholder: "Enter product image URL",
+    },
+    // {
+    //     id: "category",
+    //     name: "category",
+    //     label: "Product Category",
+    //     type: "text",
+    //     placeholder: "Enter product category",
+    // },
+    // {
+    //     id: "colors",
+    //     name: "colors",
+    //     label: "Product Colors (comma separated)",
+    //     type: "text",
+    //     placeholder: "Enter product colors",
+    // },
+    {
+        id: "price",
+        name: "price",
+        label: "Product Price",
+        type: "number",
+        placeholder: "Enter product price",
     }
 ]
