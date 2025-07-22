@@ -1,150 +1,247 @@
 import { v4 as uuid } from "uuid";
 import { ICategory, IFormInput, IProduct } from "../interfaces";
+import product from "./product.jpg"
+import category from "./category.jpg"
 
-export const productList: IProduct[] = [
+export const products: IProduct[] = [
+    // Phones & Tablets (6)
     {
-        id: uuid(),
-        title: "Nike Shoes",
-        description:
-            "As luxury T-Shirt is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "350",
-        colors: [
-            "#A31ACB",
-            "#FF6E31",
-            "#3C2A21",
-            "#CB1C8D",
-            "#645CBB",
-            "#FF0032",
-            "#820000",
-            "#13005A",
-            "#1F8A70",
-            "#84D2C5",
-        ],
-        category: {
-            name: "Nike",
-            imageURL:
-                "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "1",
+      title: "Apple iPhone 14 Pro",
+      description: "6.1‑inch Super Retina XDR, A16 Bionic, triple‑camera + Dynamic Island.",
+      imageURL: product,
+      price: 1099,
+      colors: ["#1C1C1E", "#C0C0C0", "#D4AF37", "#4B0082"],
+      category: { name: "Phones & Tablets", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "2022 Genesis GV70: Nominee",
-        description:
-            "As luxury brands go, South Korea’s Genesis is still in its infancy, having sold its first cars (as an independent Hyundai spinoff), the G80 and G90 sedans, for the 2017 model year. Despite its relative youth, Genesis has had a string of successes: We named the automaker’s G70 sports sedan our Best of 2019 award winner, and its GV80 mid-size SUV was a nominee last year for our Best of the Year award. New for 2022, the GV70 compact luxury SUV impresses on a number of fronts. Sleek exterior styling bridges the gap between a traditional SUV and the coupelike SUV look that’s increasingly popular among luxury marques. The cabin is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "500000",
-        colors: ["#FF0032", "#2563eb", "#FF6E31"],
-        category: {
-            name: "Cars",
-            imageURL:
-                "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "2",
+      title: "Samsung Galaxy S23 Ultra",
+      description: "6.8‑inch QHD+ AMOLED, Snapdragon 8 Gen 2, 200 MP camera.",
+      imageURL: product,
+      price: 1199,
+      colors: ["#000000", "#F5F5DC", "#2E8B57", "#E6E6FA"],
+      category: { name: "Phones & Tablets", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "Chevrolet Spark. 995cc Petrol",
-        description:
-            "As luxury brands go, South Korea’s Genesis is still in its infancy, having sold its first cars (as an independent Hyundai spinoff), the G80 and G90 sedans, for the 2017 model year. Despite its relative youth, Genesis has had a string of successes: We named the automaker’s G70 sports sedan our Best of 2019 award winner, and its GV80 mid-size SUV was a nominee last year for our Best of the Year award. New for 2022, the GV70 compact luxury SUV impresses on a number of fronts. Sleek exterior styling bridges the gap between a traditional SUV and the coupelike SUV look that’s increasingly popular among luxury marques. The cabin is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "120000",
-        colors: ["#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032"],
-        category: {
-            name: "Cars",
-            imageURL:
-                "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "3",
+      title: "Google Pixel 7 Pro",
+      description: "6.7‑inch OLED, Google Tensor G2, triple camera.",
+      imageURL: product,
+      price: 899,
+      colors: ["#0B0B0B", "#FFFFFF", "#808000"],
+      category: { name: "Phones & Tablets", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "Casual Men Clothes",
-        description:
-            "As luxury T-Shirt is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1552831388-6a0b3575b32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-        price: "1500",
-        colors: [],
-        category: {
-            name: "PC Desktop",
-            imageURL:
-                "https://images.unsplash.com/photo-1552831388-6a0b3575b32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-        },
+      id: "4",
+      title: "OnePlus 11 5G",
+      description: "Snapdragon 8 Gen 2, 120 Hz AMOLED, Hasselblad tuning.",
+      imageURL: product,
+      price: 799,
+      colors: ["#2F2F2F", "#006400"],
+      category: { name: "Phones & Tablets", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "Nike Shoes",
-        description:
-            "As luxury T-Shirt is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "350",
-        colors: [
-            "#A31ACB",
-            "#FF6E31",
-            "#3C2A21",
-            "#CB1C8D",
-            "#645CBB",
-            "#FF0032",
-            "#820000",
-            "#13005A",
-            "#1F8A70",
-            "#84D2C5",
-        ],
-        category: {
-            name: "Nike",
-            imageURL:
-                "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "5",
+      title: "Apple iPad Pro 12.9\" (2022)",
+      description: "12.9‑inch Liquid Retina XDR, M2 chip.",
+      imageURL: product,
+      price: 1399,
+      colors: ["#C0C0C0", "#2F2F2F"],
+      category: { name: "Phones & Tablets", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "2022 Genesis GV70: Nominee",
-        description:
-            "As luxury brands go, South Korea’s Genesis is still in its infancy, having sold its first cars (as an independent Hyundai spinoff), the G80 and G90 sedans, for the 2017 model year. Despite its relative youth, Genesis has had a string of successes: We named the automaker’s G70 sports sedan our Best of 2019 award winner, and its GV80 mid-size SUV was a nominee last year for our Best of the Year award. New for 2022, the GV70 compact luxury SUV impresses on a number of fronts. Sleek exterior styling bridges the gap between a traditional SUV and the coupelike SUV look that’s increasingly popular among luxury marques. The cabin is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "500000",
-        colors: ["#FF0032", "#2563eb", "#FF6E31"],
-        category: {
-            name: "Cars",
-            imageURL:
-                "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "6",
+      title: "Samsung Galaxy Tab S8 Ultra",
+      description: "14.6‑inch AMOLED, Snapdragon 8 Gen 1, S Pen.",
+      imageURL: product,
+      price: 1099,
+      colors: ["#1C1C1C"],
+      category: { name: "Phones & Tablets", imageURL: category },
+    },
+  
+    // Laptops & Computers (5)
+    {
+      id: "7",
+      title: "Apple MacBook Pro 16\" (M2 Pro)",
+      description: "16.2‑inch Liquid Retina XDR, M2 Pro, up to 22 hr battery.",
+        imageURL: product,
+      price: 2499,
+      colors: ["#C0C0C0", "#2F2F2F"],
+      category: { name: "Laptops & Computers", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "Chevrolet Spark. 995cc Petrol",
-        description:
-            "As luxury brands go, South Korea’s Genesis is still in its infancy, having sold its first cars (as an independent Hyundai spinoff), the G80 and G90 sedans, for the 2017 model year. Despite its relative youth, Genesis has had a string of successes: We named the automaker’s G70 sports sedan our Best of 2019 award winner, and its GV80 mid-size SUV was a nominee last year for our Best of the Year award. New for 2022, the GV70 compact luxury SUV impresses on a number of fronts. Sleek exterior styling bridges the gap between a traditional SUV and the coupelike SUV look that’s increasingly popular among luxury marques. The cabin is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: "120000",
-        colors: ["#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032"],
-        category: {
-            name: "Cars",
-            imageURL:
-                "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        },
+      id: "8",
+      title: "Dell XPS 13 Plus",
+      description: "13.4‑inch InfinityEdge, Core i7, sleek design.",
+      imageURL: product,
+      price: 1499,
+      colors: ["#E5E4E2", "#383838"],
+      category: { name: "Laptops & Computers", imageURL: category },
     },
     {
-        id: uuid(),
-        title: "Casual Men Clothes",
-        description:
-            "As luxury T-Shirt is just as distinctive and can be trimmed with premium materials like Nappa leather and carbon fiber.",
-        imageURL:
-            "https://images.unsplash.com/photo-1552831388-6a0b3575b32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-        price: "1500",
-        colors: [],
-        category: {
-            name: "PC Desktop",
-            imageURL:
-                "https://images.unsplash.com/photo-1552831388-6a0b3575b32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-        },
+      id: "9",
+      title: "HP Spectre x360 14",
+      description: "2‑in‑1 OLED, Intel Evo platform.",
+      imageURL: product,
+      price: 1399,
+      colors: ["#0C090A", "#00416A"],
+      category: { name: "Laptops & Computers", imageURL: category },
     },
-];
+    {
+      id: "10",
+      title: "Lenovo ThinkPad X1 Carbon Gen 11",
+      description: "14‑inch WUXGA, Core i7, ThinkPad keyboard.",
+      imageURL: product,
+      price: 1599,
+      colors: ["#000000"],
+      category: { name: "Laptops & Computers", imageURL: category },
+    },
+    {
+      id: "11",
+      title: "Asus ROG Zephyrus G14",
+      description: "Ryzen 9, RTX 4070, 165 Hz QHD display.",
+      imageURL: product,
+      price: 1799,
+      colors: ["#F8F8FF", "#4B4B4B"],
+      category: { name: "Laptops & Computers", imageURL: category },
+    },
+  
+    // Audio (4)
+    {
+      id: "12",
+      title: "Sony WH-1000XM5 Headphones",
+      description: "Industry‑leading noise cancellation, 30 hr battery.",
+      imageURL: product,
+      price: 399,
+      colors: ["#000000", "#D3D3D3"],
+      category: { name: "Audio", imageURL: category },
+    },
+    {
+      id: "13",
+      title: "Apple AirPods Pro (2nd Gen)",
+      description: "ANC, spatial audio, MagSafe case.",
+      imageURL: product,
+      price: 249,
+      colors: ["#FFFFFF"],
+      category: { name: "Audio", imageURL: category },
+    },
+    {
+      id: "14",
+      title: "Bose QuietComfort Earbuds II",
+      description: "Superior noise cancellation, all‑day comfort.",
+      imageURL: product,
+      price: 299,
+      colors: ["#141414", "#F5F5F5"],
+      category: { name: "Audio", imageURL: category },
+    },
+    {
+      id: "15",
+      title: "JBL Charge 5 Speaker",
+      description: "Portable, waterproof, 20 hr playtime.",
+      imageURL: product,
+      price: 179,
+      colors: ["#000000", "#0000FF", "#FF0000", "#008080"],
+      category: { name: "Audio", imageURL: category },
+    },
+  
+    // Wearables (3)
+    {
+      id: "16",
+      title: "Apple Watch Series 8",
+      description: "Health sensors, crash detection, always‑on display.",
+      imageURL: product,
+      price: 399,
+      colors: ["#1E1E1E", "#F8F8FF", "#C0C0C0", "#FF0000"],
+      category: { name: "Wearables", imageURL: category },
+    },
+    {
+      id: "17",
+      title: "Samsung Galaxy Watch 5 Pro",
+      description: "Fitness tracking, sapphire glass, 80 hr battery.",
+      imageURL: product,
+      price: 449,
+      colors: ["#2F4F4F", "#708090"],
+      category: { name: "Wearables", imageURL: category },
+    },
+    {
+      id: "18",
+      title: "Fitbit Charge 5",
+      description: "Health tracker, built‑in GPS, stress tools.",
+      imageURL: product,
+      price: 149,
+      colors: ["#000000", "#FAFAD2", "#4682B4"],
+      category: { name: "Wearables", imageURL: category },
+    },
+  
+    // Cameras & Video (3)
+    {
+      id: "19",
+      title: "Canon EOS R6 Mark II",
+      description: "24.2 MP, 4K60p, Dual Pixel AF II mirrorless.",
+      imageURL: product,
+      price: 2499,
+      colors: ["#000000"],
+      category: { name: "Cameras & Video", imageURL: category },
+    },
+    {
+      id: "20",
+      title: "Sony Alpha a7 IV",
+      description: "33 MP full‑frame, 4K60, real‑time eye AF.",
+      imageURL: product,
+      price: 2699,
+      colors: ["#000000"],
+      category: { name: "Cameras & Video", imageURL: category },
+    },
+    {
+      id: "21",
+      title: "GoPro HERO11 Black",
+      description: "5.3K, waterproof, HyperSmooth 5.0 stabilisation.",
+      imageURL: product,
+      price: 499,
+      colors: ["#000000"],
+      category: { name: "Cameras & Video", imageURL: category },
+    },
+  
+    // Monitors & Accessories (3)
+    {
+      id: "22",
+      title: "LG UltraGear 27\" QHD Gaming Monitor",
+      description: "165 Hz, 1 ms, G‑Sync compatible.",
+      imageURL: product,
+      price: 349,
+      colors: ["#000000"],
+      category: { name: "Monitors & Accessories", imageURL: category },
+    },
+    {
+      id: "23",
+      title: "Dell UltraSharp 32\" 4K Monitor",
+      description: "Factory‑calibrated, USB‑C hub.",
+      imageURL: product,
+      price: 899,
+      colors: ["#000000"],
+      category: { name: "Monitors & Accessories", imageURL: category },
+    },
+    {
+      id: "24",
+      title: "Logitech MX Master 3S Mouse",
+      description: "8K DPI, ergonomic, silent clicks.",
+      imageURL: product,
+      price: 99,
+      colors: ["#383838", "#CCCCCC"],
+      category: { name: "Monitors & Accessories", imageURL: category },
+    },
+    {
+      id: "25",
+      title: "Anker PowerCore 20000mAh",
+      description: "High‑capacity charger, dual USB, fast‑charge.",
+      imageURL: product,
+      price: 59,
+      colors: ["#000000", "#FFFFFF"],
+      category: { name: "Monitors & Accessories", imageURL: category },
+    },
+  ];
+  
 
 export const formInputsList: IFormInput[] = [
     {
@@ -189,45 +286,34 @@ export const colors: string[] = [
 
 export const categories: ICategory[] = [
     {
-        id: uuid(),
-        name: "Nike",
-        imageURL:
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      id: uuid(),
+      name: "Phones & Tablets",
+      imageURL: "https://images.unsplash.com/photo-1603899124025-76e2708e84e8?auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: uuid(),
-        name: "T-Shirt",
-        imageURL:
-            "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      id: uuid(),
+      name: "Laptops & Computers",
+      imageURL: "https://images.unsplash.com/photo-1611171711919-40e9a799e3d7?auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: uuid(),
-        name: "Clothes",
-        imageURL:
-            "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      id: uuid(),
+      name: "Audio",
+      imageURL: "https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: uuid(),
-        name: "PC Desktop",
-        imageURL:
-            "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1142&q=80",
+      id: uuid(),
+      name: "Wearables",
+      imageURL: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: uuid(),
-        name: "Furniture",
-        imageURL:
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      id: uuid(),
+      name: "Cameras & Video",
+      imageURL: "https://images.unsplash.com/photo-1612817159974-2162fdd3574a?auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: uuid(),
-        name: "Cars",
-        imageURL:
-            "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      id: uuid(),
+      name: "Monitors & Accessories",
+      imageURL: "https://images.unsplash.com/photo-1587202372775-e4d84b93d58f?auto=format&fit=crop&w=1170&q=80",
     },
-    {
-        id: uuid(),
-        name: "Camera",
-        imageURL:
-            "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-];
+  ];
+  
